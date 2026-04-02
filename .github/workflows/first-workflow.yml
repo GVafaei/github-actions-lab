@@ -1,4 +1,4 @@
-name: My First Workflow
+name: CI Pipeline
 
 on:
   push:
@@ -19,11 +19,8 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Install dependencies
+      - name: Install pytest
         run: pip install pytest
 
       - name: Run tests
         run: pytest
-
-def test_add():
-    assert 1 + 1 == 2
